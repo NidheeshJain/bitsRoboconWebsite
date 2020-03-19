@@ -12,9 +12,15 @@
     <nav>
         <div class="nav-heading" onclick="toggleMenu()">MENU</div>
         <div class="nav-elements">
-            <a href="#about"><div onclick="toggleMenu()">ABOUT US</div></a>
-            <a href="#projects"><div onclick="toggleMenu()">PROJECTS</div></a>
-            <a href="#contact"><div onclick="toggleMenu()">CONTACT US</div></a>
+            <a href="#about">
+                <div onclick="toggleMenu()">ABOUT US</div>
+            </a>
+            <a href="#projects">
+                <div onclick="toggleMenu()">PROJECTS</div>
+            </a>
+            <a href="#contact">
+                <div onclick="toggleMenu()">CONTACT US</div>
+            </a>
         </div>
     </nav>
 
@@ -43,44 +49,83 @@
 
         <div id="about">
             <div class="title">About Us</div>
-            <div class="heading">Who we are</div>
-            <div class="content">We are a group of enthusiasts who design and build robots to compete in various competitions.</div>
+
+            <div class="heading">Who We Are</div>
+            <div class="content">We are a group of enthusiasts who design and build robots to compete in various
+                competitions.</div>
+
             <div class="heading">What We Do</div>
-            <div class="content">At Bits Robocon we take on challenges in the form of competitions to continuously learn and hone our skills.</div>
+            <div class="content">At Bits Robocon we take on challenges in the form of competitions to continuously learn
+                and hone our skills.</div>
         </div>
 
-        <div id="projects"></div>
+        <div id="projects">
+            <div class="title">Projects</div>
 
-        <div id="contact"></div>
-    </div>
+            <div class="heading">Current Projects</div>
+            <div class="content">
+                <ul>
+                    <li>Autonomous Drone</li>
+                    <li>Quadruped</li>
+                </ul>
+            </div>
 
-    <script>
-        var toggleCounter = 0;
-        var heightNavElem = document.getElementsByClassName('nav-elements')[0].offsetHeight;
-        var HomeElem = document.getElementById('home');
-        var heightNavHeading = document.getElementsByClassName('nav-heading')[0].offsetHeight;
-        var wrapperElement = document.getElementById('wrapper');
-        function toggleMenu() {
-            console.log(heightNavElem, heightNavHeading);
-            if (toggleCounter % 2 == 0) {
-                wrapperElement.style.transform = "translateY(-"+ heightNavElem +"px)";
-                console.log(wrapperElement.style.transform);
-            }
-            else {
-                wrapperElement.style.transform = 'translateY(0)';
-                console.log(wrapperElement.style.transform);
-            }
+            <div class="heading">Past Projects</div>
+            <div class="content">
+                <ul>
+                    <li>somethin #1</li>
+                    <li>somethin #2</li>
+                </ul>
+            </div>
+        </div>
 
-            if (toggleCounter !== 0){
-                wrapperElement.style.transition = '0.5s ease-in-out';
-            }
+        <div id="contact">
+            <div class="title">Contact Us</div>
 
-            else{
-                HomeElem.style.height = "calc(100vh - " + heightNavHeading + "px)"
+            <div class="heading">Get in Touch!</div>
+            <div class="content">
+                <div class="subcontent">
+                    <ul>
+                        <li>E-Mail : mail.address</li>
+                        <li>Location : location</li>
+                    </ul>
+                </div>
+                <div class="subcontent">
+                    <ul>
+                        <li>E-Mail : mail.address</li>
+                        <li>Location : location</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var toggleCounter = 0;
+            var heightNavElem = document.getElementsByClassName('nav-elements')[0].offsetHeight;
+            var HomeElem = document.getElementById('home');
+            var heightNavHeading = document.getElementsByClassName('nav-heading')[0].offsetHeight;
+            var wrapperElement = document.getElementById('wrapper');
+            function toggleMenu() {
+                console.log(heightNavElem, heightNavHeading);
+                if (toggleCounter % 2 == 0) {
+                    wrapperElement.style.transform = "translateY(-" + heightNavElem + "px)";
+                    console.log(wrapperElement.style.transform);
+                }
+                else {
+                    wrapperElement.style.transform = 'translateY(0)';
+                    console.log(wrapperElement.style.transform);
+                }
+
+                if (toggleCounter !== 0) {
+                    wrapperElement.style.transition = '0.5s ease-in-out';
+                }
+
+                else {
+                    HomeElem.style.height = "calc(100vh - " + heightNavHeading + "px)"
+                }
+                toggleCounter++;
             }
-            toggleCounter++;
-        }
-    </script>
+        </script>
 
 </body>
 
