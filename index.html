@@ -10,11 +10,11 @@
 <body>
 
     <nav>
-        <!-- <div class="nav-element">ABOUT US</div>
+        <div class="nav-heading" onclick="toggleMenu()">MENU</div>
+        <div class="nav-element">ABOUT US</div>
         <div class="nav-element">PROJECTS</div>
         <div class="nav-element">CONTACT US</div>
-        -->
-        <div class="nav-heading">MENU</div>
+       
     </nav>
 
 
@@ -35,6 +35,20 @@
 
         <div id="projects"></div>
     </div>
+
+    <script>
+        var toggleCounter = 0;
+        function toggleMenu(){
+            var wrapperElement = document.getElementById('wrapper');
+            if (toggleCounter%2 == 0){
+                wrapperElement.style.transform = 'translateY(0)';
+            }
+            else {
+                wrapperElement.style.transform = 'translateY(-90px)';
+            }
+            toggleCounter++;
+        }
+    </script>
 
 </body>
 

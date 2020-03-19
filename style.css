@@ -6,6 +6,9 @@
     color:white;
     justify-content: center;
     align-items: center;
+    font-size: 16px;
+    display:flex;
+    flex-direction: column;
 }
 
 #wrapper{
@@ -14,6 +17,9 @@
     background-color: black;
     justify-content: start;
     z-index:1;
+    transform: translateY(-90px);
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     /* transform: translateY(); */
 }
 
@@ -44,12 +50,13 @@ nav{
 
 #home{
     height:calc(99vh - 30px);
-    /* background-color:pink; */
+    z-index:2;
+    background-color:pink;
 }
 
 #logo{
     width:100vw;
-    padding:15vh 20vw 10vh 20vw;
+    padding:0vh 20vw 10vh 20vw;
     /* background-color:blue ; */
 }
 
@@ -65,5 +72,5 @@ nav{
 }
 
 #social svg{
-    margin:10px;
+    margin:0 15px 0 15px;
 }
