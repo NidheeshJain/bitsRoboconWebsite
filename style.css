@@ -94,7 +94,7 @@ nav>div{
 }
 
 .title{
-    font-size: calc(7vw + 7vh);
+    font-size: calc(6vw + 6vh);
     text-align:center;
     padding:2vh 0;
 }
@@ -135,10 +135,6 @@ ul{
 
 #contact .content{
     flex-direction: row;
-}
-
-.subcontent{
-    border:2px solid black;
 }
 
 .subcontent:nth-child(1){
