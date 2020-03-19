@@ -105,15 +105,16 @@
             var HomeElem = document.getElementById('home');
             var heightNavHeading = document.getElementsByClassName('nav-heading')[0].offsetHeight;
             var wrapperElement = document.getElementById('wrapper');
+            var body = document.getElementsByTagName("body")[0];
             function toggleMenu() {
                 console.log(heightNavElem, heightNavHeading);
                 if (toggleCounter % 2 == 0) {
                     wrapperElement.style.transform = "translateY(-" + heightNavElem + "px)";
-                    console.log(wrapperElement.style.transform);
+                    // console.log(wrapperElement.style.transform);
                 }
                 else {
                     wrapperElement.style.transform = 'translateY(0)';
-                    console.log(wrapperElement.style.transform);
+                    // console.log(wrapperElement.style.transform);
                 }
 
                 if (toggleCounter !== 0) {
@@ -121,7 +122,10 @@
                 }
 
                 else {
-                    HomeElem.style.height = "calc(100vh - " + heightNavHeading + "px)"
+                    HomeElem.style.height = "calc(100vh - " + heightNavHeading + "px)";
+                    body.style.height = body.offsetHeight;
+                    wrapperElement.style.height = body.offsetheight;
+                    document.getElementById("contact").style.height = ("calc(" + document.getElementById("contact").offsetHeight +"px + " + heightNavElem+ "px)");
                 }
                 toggleCounter++;
             }

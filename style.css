@@ -131,6 +131,7 @@ ul{
     color:white;
     padding:5px 0;
     background-color: darkred;
+    transform-origin: top middle;
 }
 
 #contact .content{
@@ -143,4 +144,5 @@ ul{
 
 .subcontent:nth-child(2){
     margin-left:20px;
+    transform: ;
 }
