@@ -6,7 +6,10 @@
     /* border:1px solid white; */
     box-sizing: border-box;
     scroll-behavior: smooth;
-    overflow-y: hidden;
+}
+
+::-webkit-scrollbar{
+    width:0px;
 }
 
 body{
@@ -62,6 +65,7 @@ nav>div{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding:20px 0;
 }
 
 #logo{
@@ -81,4 +85,24 @@ nav>div{
 
 #social > svg{
     margin:2vh 2vw;
+}
+
+#about{
+    color:white;
+    padding:20px 0;
+    background-color: grey;
+}
+
+.title{
+    font-size: 12vw;
+    text-align:center;
+}
+
+.heading{
+    font-size:6.5vw;
+    text-align: center;
+}
+
+.content{
+    text-align: center;
 }
